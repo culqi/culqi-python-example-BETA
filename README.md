@@ -19,6 +19,24 @@ Este es un ejemplo de [Culpi-Python 0.1.2 BETA](https://github.com/culqi/culqi-p
   </tr>
 </table>
 
+### Instalación
+
+Ingresar a cada proyecto y ejecutar
+
+```bash
+pip install -r requirements.txt
+```
+
+```bash
+cd flask && python app.py
+```
+Probar Flask: http://127.0.0.1:5000/
+
+```bash
+cd django_app && python manage.py runserver
+```
+Probar Django: http://127.0.0.1:8000/culqi/
+
 
 ## Licencia
 
