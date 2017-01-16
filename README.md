@@ -1,6 +1,6 @@
 # Culqi Python Example BETA
 
-Este es un ejemplo de [Culpi-Python 0.1.2 BETA](https://github.com/culqi/culqi-python)
+Este es un ejemplo de [Culpi-Python 0.1.7 BETA](https://github.com/culqi/culqi-python)
 
 ### Datos de Prueba
 

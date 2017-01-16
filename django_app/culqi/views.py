@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from culqipy import culqi
+import culqipy
 
 # Create your views here.
 
@@ -14,7 +14,20 @@ def charges(request):
     last_name = request.POST['last_name']
     email =  request.POST['email']
     if request.method == 'POST':
-        culqiObject = culqi.Culqi("pk_test_vzMuTHoueOMlgUPj","sk_test_UTCQSGcXW8bCyU59")
-        charge = culqiObject.createCharge("Avenida Lima 1232","LIMA",1000,"PE","PEN",email,first_name,0,last_name,"",3333339,"Venta de prueba",token)
+        culqipy.API_KEY = "sk_test_UTCQSGcXW8bCyU59"
+        charge = culqipy.Charge.create(
+          address="Avenida Lima 1232",
+          address_city="LIMA",
+          amount=1000,
+          country_code="PE",
+          currency_code="PEN",
+          email=email,
+          first_name=first_name,
+          installments=0,
+          last_name=last_name,
+          metadata="",
+          phone_number=3333339,
+          product_description="Venta de prueba",
+          token_id=token)
         return JsonResponse(charge, safe=False)
     return JsonResponse("only POST method", safe=False)
