@@ -1,6 +1,6 @@
-# Culqi Python Example BETA
+# Culqi Python Example
 
-Este es un ejemplo de [Culpi-Python 0.1.7 BETA](https://github.com/culqi/culqi-python)
+Este es un ejemplo de [Culpi-Python 0.2.3](https://github.com/culqi/culqi-python)
 
 ### Datos de Prueba
 
@@ -40,4 +40,4 @@ Probar Django: http://127.0.0.1:8000/culqi/
 
 ## Licencia
 
-El código fuente de culqi-python-example-BETA está distribuido bajo MIT License, revisar el archivo [LICENSE](https://github.com/culqi/culqi-python-example-BETA/blob/master/LICENSE).
+El código fuente de culqi-python-example está distribuido bajo MIT License, revisar el archivo [LICENSE](https://github.com/culqi/culqi-python-example-BETA/blob/master/LICENSE).

@@ -12,29 +12,26 @@ def index():
 
 @app.route('/charges', methods=['POST'])
 def charge():
-    token = request.form['token']
-    first_name = request.form['first_name']
-    last_name = request.form['last_name']
-    email = request.form['email']
+    if request.method == 'POST':
+        token = request.form['token']
+        installments = request.form['installments']
 
-    culqipy.API_KEY = "sk_test_UTCQSGcXW8bCyU59"
+        culqipy.API_KEY = "sk_test_UTCQSGcXW8bCyU59"
 
-    charge = culqipy.Charge.create(
-      address="Avenida Lima 1232",
-      address_city="LIMA",
-      amount=1000,
-      country_code="PE",
-      currency_code="PEN",
-      email=email,
-      first_name=first_name,
-      installments=0,
-      last_name=last_name,
-      metadata="",
-      phone_number=3333339,
-      product_description="Venta de prueba",
-      token_id=token)
+        dir_charge = {'amount': 3500,
+                      'capture': True,
+                      'currency_code': 'PEN',
+                      'description': 'Culqi Store',
+                      'email': 'wmuro@me.com',
+                      'installments': installments,
+                      'metadata': {'order_id': '1234'},
+                      'source_id': token}
 
-    return jsonify(charge)
+        charge = culqipy.Charge.create(dir_charge)
+
+        return jsonify(charge)
+
+    return jsonify({'error': 'nopost'})
 
 if __name__ == "__main__":
     app.run()
