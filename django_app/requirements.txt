@@ -1,2 +1,2 @@
-culqipy==0.2.3
+culqipy==0.2.6
 Django==1.10.5

@@ -1,6 +1,6 @@
 # Culqi Python Example
 
-Este es un ejemplo de [Culpi-Python 0.2.3](https://github.com/culqi/culqi-python)
+Este es un ejemplo de [Culpi-Python 0.2.6](https://github.com/culqi/culqi-python)
 
 ### Datos de Prueba
 

@@ -1,2 +1,2 @@
-culqipy==0.2.3
+culqipy==0.2.6
 Flask==0.12
